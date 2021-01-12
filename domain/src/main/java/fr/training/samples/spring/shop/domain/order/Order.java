@@ -12,7 +12,7 @@ public class Order extends AbstractBaseEntity {
 
 	private Customer customer;
 
-	private final List<OrderItem> orderItems = new ArrayList<>();
+	private final List<OrderItem> orderItems = new ArrayList<OrderItem>();
 
 	private Integer total;
 
@@ -86,7 +86,7 @@ public class Order extends AbstractBaseEntity {
 	public static class Builder {
 		private String id;
 		private Customer customer;
-		private List<OrderItem> orderItems = new ArrayList<>();
+		private List<OrderItem> orderItems = new ArrayList<OrderItem>();
 
 		public Builder id(final String id) {
 			this.id = id;

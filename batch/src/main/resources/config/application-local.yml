@@ -2,8 +2,8 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: admin
-#force data.sql script execution
+    password: postgres
+    #force data.sql script execution
     initialization-mode: always
 
 logging:

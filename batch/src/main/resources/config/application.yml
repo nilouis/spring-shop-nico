@@ -1,11 +1,9 @@
 spring:
   application:
     name: Spring-shop-batch
-
   batch:
     job: 
       enabled: true
-    
   jta:
     enabled: false
   jpa:
@@ -13,10 +11,22 @@ spring:
     driver-class-name: org.postgresql.Driver
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: update
-       
+      ddl-auto: create
+    mapping-resources:
+      - META-INF/common.orm.hbm.xml
+      - META-INF/customer.orm.hbm.xml
+
 logging:
   level:
     ROOT: INFO
     org.springframework: INFO
     fr.training.samples.spring.shop: INFO
+
+---
+
+spring:
+  profiles: dev
+
+
+
+
